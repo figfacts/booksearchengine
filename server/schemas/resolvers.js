@@ -6,7 +6,7 @@ const resolvers = {
   Query: {
     me: async (parent, args, context) => {
         if (context.user) {
-          return Profile.findOne({ _id: context.user._id });
+          return User.findOne({ _id: context.user._id });
         }
         throw new AuthenticationError('You need to be logged in!');
       },
@@ -46,7 +46,7 @@ const resolvers = {
         return updatedUser;
       }
 
-      throw new AuthenticationError('You need to be logged in!');
+      // throw new AuthenticationError('Save book error!');
     },
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
