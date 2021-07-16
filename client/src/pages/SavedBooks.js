@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
+import React from 'react';
+
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 
 // import { getMe, deleteBook } from '../utils/API';
@@ -15,7 +17,7 @@ const SavedBooks = () => {
   const userData = data?.me || {};
 
   // use this to determine if `useEffect()` hook needs to run again
-  const userDataLength = Object.keys(userData).length;
+  // const userDataLength = Object.keys(userData).length;
 
   // useEffect(() => {
   //   const getUserData = async () => {
